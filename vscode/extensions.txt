@@ -1,0 +1,8 @@
+bierner.markdown-preview-github-styles
+isudox.vscode-jetbrains-keybindings
+jithurjacob.nbpreviewer
+k--kato.intellij-idea-keybindings
+MS-CEINTL.vscode-language-pack-de
+ms-python.python
+ms-vscode.csharp
+vscodevim.vim

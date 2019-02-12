@@ -1,0 +1,15 @@
+{   
+    "telemetry.enableTelemetry": false,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/K",
+        "G:\\Coding\\Cmder\\vscode.bat"
+    ],
+    "jetbrainsKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.formatOnSave": true
+}
