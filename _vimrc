@@ -16,6 +16,7 @@ set si
 set wrap
 set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+set backspace=indent,eol,start
 colo delek 
 
 nmap <M-j> mz:m+<cr>`z 
