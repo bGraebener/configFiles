@@ -89,7 +89,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 #alias ll='ls -l'
@@ -115,3 +115,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+alias vi='vim $*'
+alias ll='ls -al --color $*'
+alias ls='ls --color $*'
+alias g.='git add .'
+alias gl='git log --oneline --all --graph --decorate $*'
+alias gc='git commit -m $*'
+alias gp='git push'
+alias gs='git status'
