@@ -1,19 +1,21 @@
-set ruler
+set ruler                   " show row and col info
 set wildmenu
-set number
-set cmdheight=2
-set ignorecase
-set smartcase
-set vb
-syntax enable
-set encoding=utf8
-set expandtab
-set smarttab
-set shiftwidth=4
-set tabstop=4
-set ai
-set si
-set wrap
+set number                  " show line numbers
+set cmdheight=2             " height of command line
+set ignorecase              " case insensitive searches
+set smartcase               " smart-case search
+set vb                      " visual bell (no beeping)
+syntax enable               " enable syntax highlighting
+set encoding=utf8           
+set expandtab               " use spaces instead of tab
+set smarttab                " enable smart tabs
+set shiftwidth=4            " number of auto indents
+set tabstop=4               " number of spaces per tab
+set ai                      " auto indent new lines
+set si                      " enable smart indent
+set wrap                    " wrap text
+set textwidth=120
+set linebreak               " break lines at word
 set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 set backspace=indent,eol,start
