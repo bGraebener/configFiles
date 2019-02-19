@@ -9,7 +9,7 @@ alias gs='git status'
 alias gll='git pull'
 
 function gcm(){
-    git commit -m "\"$*\""
+    git commit -m "$*"
 }
 
 function gco(){
