@@ -116,11 +116,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias vi='vim $*'
-alias ll='ls -al --color $*'
-alias ls='ls --color $*'
-alias g.='git add .'
-alias gl='git log --oneline --all --graph --decorate $*'
-alias gc='git commit -m $*'
-alias gp='git push'
-alias gs='git status'
