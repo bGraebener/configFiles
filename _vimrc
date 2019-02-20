@@ -26,6 +26,30 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z 
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
+" up and down arrows move line 
+no <down> ddp
+no <left> <Nop>
+no <right> <Nop>
+no <up> ddkP
+
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
+
+" Center text when moving to location
+nmap G Gzz
+nmap nzz
+nmap Nzz
+
+" pairs 'backslash follow by 'char' results in those" 
+imap <leader>' ''<ESC>i
+imap <leader>" ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>{ {<CR><CR>}<ESC>k4i
+imap <leader>< <><ESC>i
+
+
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
     let old_query = getreg(".")
