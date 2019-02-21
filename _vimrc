@@ -39,8 +39,8 @@ ino <up> <Nop>
 
 " Center text when moving to location
 nmap G Gzz
-nmap nzz
-nmap Nzz
+nmap n nzz
+nmap N Nzz
 
 " pairs 'backslash follow by 'char' results in those" 
 imap <leader>' ''<ESC>i

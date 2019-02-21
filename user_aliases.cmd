@@ -21,3 +21,4 @@ gs=git status
 gll=git pull
 gc=git commit -m "$*"
 conf=cd /d "c:\Users\Basti\Coding\configFiles"
+~=cd %HOME%
