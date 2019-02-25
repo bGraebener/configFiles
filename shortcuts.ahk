@@ -15,6 +15,11 @@ Numpad0 & Numpad2::
 Run, code.cmd
 return
 
+; open winamp
+Numpad0 & Numpad3::
+Run, winamp.exe
+return
+
 ;remap caps lock to esc for vim and vim only
 *Capslock::
     if ProcessExist("vim.exe"){
