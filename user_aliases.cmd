@@ -12,8 +12,9 @@ ls=ls --show-control-chars -F --color $*
 ll=ls -al --color $*
 
 ss=scoop status
-su=scoop update
+su=scoop update $*
 sc=scoop search | grep $*
+sl=scoop list
 
 pwd=cd
 clear=cls
@@ -21,7 +22,7 @@ history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
-conf="c:\user\Basti\Coding\configFiles"
+conf=cd /d "c:\users\Basti\Coding\configFiles"
 
 gl=git log --oneline --all --graph --decorate  $*
 g.=git add .
