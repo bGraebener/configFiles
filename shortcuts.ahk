@@ -22,11 +22,11 @@ return
 
 ;remap caps lock to esc for vim and vim only
 *Capslock::
-    if ProcessExist("vim.exe"){
+    if ProcessExist("vim.exe")or WinActive("Debian [wird ausgeführt] - Oracle VM VirtualBox"){
        SetCapsLockState, Off
        Send, {ESC}
     }
-    else {
+    else{
         GetKeyState, keystate, CapsLock, T
         if(keystate = "D")
             SetCapsLockState, Off
