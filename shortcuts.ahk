@@ -1,4 +1,6 @@
-﻿; ============== Shortcuts =================================
+﻿SetTitleMatchMode, 2
+
+; ============== Shortcuts =================================
 ; create a new instance of cmder if none exists or a new tab
 Numpad0 & Numpad1::
 if(WinExist("Cmder")){
@@ -26,7 +28,7 @@ return
 ; group for capslock to escape mapping
 GroupAdd, capsGroup, Debian
 GroupAdd, capsGroup, ahk_exe Code.exe
-GroupAdd, capsGroup, Final Year Project Dissertation
+GroupAdd, capsGroup, Dissertation
 
 ; remap caps lock to esc for vim and vim only
 *Capslock::
