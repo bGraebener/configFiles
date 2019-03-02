@@ -1,3 +1,4 @@
+﻿; ============== Shortcuts =================================
 ; create a new instance of cmder if none exists or a new tab
 Numpad0 & Numpad1::
 if(WinExist("Cmder")){
@@ -20,9 +21,16 @@ Numpad0 & Numpad3::
 Run, winamp.exe
 return
 
-;remap caps lock to esc for vim and vim only
+
+; ===================== Escape/CapsLock Remap ====================================
+; group for capslock to escape mapping
+GroupAdd, capsGroup, Debian
+GroupAdd, capsGroup, ahk_exe Code.exe
+GroupAdd, capsGroup, Final Year Project Dissertation
+
+; remap caps lock to esc for vim and vim only
 *Capslock::
-    if ProcessExist("vim.exe")or WinActive("Debian [wird ausgeführt] - Oracle VM VirtualBox"){
+    if ProcessExist("vim.exe") or WinActive("ahk_group capsGroup"){
        SetCapsLockState, Off
        Send, {ESC}
     }
@@ -41,3 +49,6 @@ ProcessExist(name){
     return ErrorLevel
 }
 
+; behave normally if used for original purpose
+
+Numpad0::Send {Numpad0}
