@@ -1,8 +1,8 @@
-﻿SetTitleMatchMode, 2
+﻿; ============= Keyboard Layout remapping =====================
+SetTitleMatchMode, 2
 
 GroupAdd, remapGroup, ahk_class Notepad
 GroupAdd, remapGroup, ahk_class Notepad++
-; ============= Keyboard Layout remapping =====================
 
 GroupAdd, remapGroup, ahk_exe idea64.exe
 GroupAdd, remapGroup, Cmder

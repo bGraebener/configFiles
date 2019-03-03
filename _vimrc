@@ -1,3 +1,4 @@
+" global settings
 set ruler                   " show row and col info
 set wildmenu
 set number                  " show line numbers
@@ -5,7 +6,6 @@ set cmdheight=2             " height of command line
 set ignorecase              " case insensitive searches
 set smartcase               " smart-case search
 set vb                      " visual bell (no beeping)
-syntax enable               " enable syntax highlighting
 set encoding=utf8           
 set expandtab               " use spaces instead of tab
 set smarttab                " enable smart tabs
@@ -18,26 +18,13 @@ set textwidth=120
 set linebreak               " break lines at word
 set laststatus=2
 set backspace=indent,eol,start
-colo delek 
 set nocompatible
 
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD | tr -d [:cntrl:]")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
+" status line settings
 set statusline=
 set statusline+=%#PmenuSel#
-set statusline+=%{StatuslineGit()}
-set statusline+=\ %#LineNr#
-set statusline+=%f
-set statusline+=%m
+set statusline+=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h
 set statusline+=%=
-set statusline+=%#CursorColumn#
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
@@ -46,7 +33,9 @@ set statusline+=\ %l:%c     " line number; column number
 set statusline+=\ 
 
 filetype plugin on
-syntax on
+"syntax on
+colo delek 
+syntax enable               " enable syntax highlighting
 
 nmap <M-j> mz:m+<cr>`z 
 nmap <M-k> mz:m-2<cr>`z 
@@ -54,15 +43,15 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " up and down arrows move line 
-no <down> ddp
-no <left> <Nop>
-no <right> <Nop>
-no <up> ddkP
-
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
+"no <down> ddp
+"no <left> <Nop>
+"no <right> <Nop>
+"no <up> ddkP
+"
+"ino <down> <Nop>
+"ino <left> <Nop>
+"ino <right> <Nop>
+"ino <up> <Nop>
 
 " Center text when moving to location
 nmap G Gzz
