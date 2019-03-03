@@ -25,26 +25,20 @@ return
 
 
 ; ===================== Escape/CapsLock Remap ====================================
-; group for capslock to escape mapping
-GroupAdd, capsGroup, Debian
-GroupAdd, capsGroup, ahk_exe Code.exe
-GroupAdd, capsGroup, Dissertation
-
 ; remap caps lock to esc for vim and vim only
 *Capslock::
-    if ProcessExist("vim.exe") or WinActive("ahk_group capsGroup"){
+     if WinActive("ahk_exe Code.exe") or ProcessExist("vim.exe") or WinActive("Final Year") or WinActive("Debian"){
        SetCapsLockState, Off
        Send, {ESC}
-    }
-    else{
+       return
+    }else{
         GetKeyState, keystate, CapsLock, T
         if(keystate = "D")
             SetCapsLockState, Off
         else
             SetCapsLockState, On
         return
-    }
-    return
+   }
 
 ProcessExist(name){
     Process, Exist, %name%
