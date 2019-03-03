@@ -17,11 +17,34 @@ set wrap                    " wrap text
 set textwidth=120
 set linebreak               " break lines at word
 set laststatus=2
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 set backspace=indent,eol,start
 colo delek 
-
 set nocompatible
+
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD | tr -d [:cntrl:]")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=%{StatuslineGit()}
+set statusline+=\ %#LineNr#
+set statusline+=%f
+set statusline+=%m
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%      "percentage of file through
+set statusline+=\ %l:%c     " line number; column number
+set statusline+=\ 
+
 filetype plugin on
 syntax on
 
