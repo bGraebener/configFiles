@@ -9,8 +9,8 @@ syntax enable               " enable syntax highlighting
 set encoding=utf8           
 set expandtab               " use spaces instead of tab
 set smarttab                " enable smart tabs
-set shiftwidth=4            " number of auto indents
-set tabstop=4               " number of spaces per tab
+set shiftwidth=2            " number of auto indents
+set tabstop=2               " number of spaces per tab
 set ai                      " auto indent new lines
 set si                      " enable smart indent
 set wrap                    " wrap text
@@ -20,6 +20,10 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 set backspace=indent,eol,start
 colo delek 
+
+set nocompatible
+filetype plugin on
+syntax on
 
 nmap <M-j> mz:m+<cr>`z 
 nmap <M-k> mz:m-2<cr>`z 
@@ -66,3 +70,8 @@ function! HasPaste()
 endfunction
 
 map <leader>ss :setlocal spell!<cr>
+
+inoremap <Space><Space> <Esc>/<++><Cr>"_c4l
+autocmd FileType c inoremap ;f for(int i = 0; i < ; i++){<Cr><++><Cr>}<Cr><++><Esc>6bi
+autocmd FileType c inoremap ;i if(){<Cr><++><Cr>}<Cr><++><Esc>4ba
+autocmd FileType c inoremap ;# #include<><Cr><++><Esc>2ba
