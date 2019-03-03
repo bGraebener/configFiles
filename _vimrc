@@ -75,3 +75,4 @@ inoremap <Space><Space> <Esc>/<++><Cr>"_c4l
 autocmd FileType c inoremap ;f for(int i = 0; i < ; i++){<Cr><++><Cr>}<Cr><++><Esc>6bi
 autocmd FileType c inoremap ;i if(){<Cr><++><Cr>}<Cr><++><Esc>4ba
 autocmd FileType c inoremap ;# #include<><Cr><++><Esc>2ba
+autocmd FileType c inoremap ;m int main(int argc, char* argv[]){<Cr><Cr><Cr><Cr>return 0;<Cr>}<Cr><Esc>6bi<Tab>
