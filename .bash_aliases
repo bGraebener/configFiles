@@ -1,6 +1,7 @@
 alias vi='vim $*'
 alias ll='ls -al --color=auto $*'
 alias ls='ls --color $*'
+alias cls='clear'
 alias sp='sudo poweroff'
 
 alias g.='git add .'
@@ -21,4 +22,3 @@ function gcor(){
     gcc -o $1 $2 -lm
     ./$1
 }
-
