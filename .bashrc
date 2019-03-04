@@ -65,7 +65,9 @@ fi
 #unset color_prompt force_color_promptt
 
 source /usr/lib/git-core/git-sh-prompt
-export PS1="${debian_chroot:+($debian_chroot)}\[\033[38;05;28m\]\W\[\033[00m\]\$(__git_ps1)\[\033[00m\] $ "
+#export PS1="${debian_chroot:+($debian_chroot)}\[\033[38;05;28m\]\W\[\033[00m\]\$(__git_ps1)\[\033[00m\] $ "
+
+export PS1="\[\033[38;5;34m\]\u\[\033[38;5;15m\] @ \[\033[38;5;196m\]\w\[\033[38;5;34m\]\$(__git_ps1)\n\[\033[38;5;34m\]\$ \[\033[38;5;255m\]"
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in

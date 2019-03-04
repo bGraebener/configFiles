@@ -1,6 +1,7 @@
 alias vi='vim $*'
 alias ll='ls -al --color=auto $*'
 alias ls='ls --color $*'
+alias sp='sudo poweroff'
 
 alias g.='git add .'
 alias gl='git log --oneline --all --graph --decorate $*'
