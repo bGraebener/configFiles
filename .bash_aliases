@@ -3,6 +3,7 @@ alias ll='ls -al --color=auto $*'
 alias ls='ls --color $*'
 alias cls='clear'
 alias sp='sudo poweroff'
+alias z='zsh'
 
 alias g.='git add .'
 alias gl='git log --oneline --all --graph --decorate $*'
