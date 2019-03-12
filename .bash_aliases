@@ -4,6 +4,7 @@ alias ls='ls --color $*'
 alias cls='clear'
 alias sp='sudo poweroff'
 alias z='zsh'
+alias home='cd ~'
 
 alias g.='git add .'
 alias gl='git log --oneline --all --graph --decorate $*'

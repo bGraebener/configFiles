@@ -23,6 +23,7 @@ unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
 conf=cd /d "c:\users\Basti\Coding\configFiles" >NUL 2>&1 || cd /d "g:\coding\configs\"
+home=cd %HOME%
 
 gl=git log --oneline --all --graph --decorate  $*
 g.=git add .
