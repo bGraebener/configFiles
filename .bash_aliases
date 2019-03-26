@@ -5,6 +5,8 @@ alias cls='clear'
 alias sp='sudo poweroff'
 alias z='zsh'
 alias home='cd ~'
+alias config='cd ~/configFiles'
+alias coding='cd ~/Coding'
 
 alias g.='git add .'
 alias gl='git log --oneline --all --graph --decorate $*'
