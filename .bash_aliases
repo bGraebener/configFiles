@@ -1,5 +1,5 @@
 alias vi='vim $*'
-alias ll='ls -al --color=auto $*'
+alias ll='ls -alh --color=auto $*'
 alias ls='ls --color $*'
 alias cls='clear'
 alias sp='sudo poweroff'

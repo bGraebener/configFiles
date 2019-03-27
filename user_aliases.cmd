@@ -9,7 +9,7 @@ e.=explorer .
 e =explorer $1
 
 ls=ls --show-control-chars -F --color $*
-ll=ls -al --color $*
+ll=ls -alh --color $*
 
 ss=scoop status
 su=scoop update $*
@@ -23,7 +23,7 @@ unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
 conf=cd /d "c:\users\Basti\Coding\configFiles" >NUL 2>&1 || cd /d "g:\coding\configs\"
-home=cd %HOME%
+home=cd /d %HOME%
 
 gl=git log --oneline --all --graph --decorate  $*
 g.=git add .

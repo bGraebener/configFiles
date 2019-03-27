@@ -1,12 +1,11 @@
 ﻿; ============= Keyboard Layout remapping =====================
-SetTitleMatchMode, 2
+SetTitleMatchMode 2
 
 GroupAdd, remapGroup, ahk_class Notepad
 GroupAdd, remapGroup, ahk_class Notepad++
 
 GroupAdd, remapGroup, ahk_exe idea64.exe
 GroupAdd, remapGroup, Cmder
-GroupAdd, remapGroup, Debian [wird ausgeführt] - Oracle VM VirtualBox
 GroupAdd, remapGroup, Final Year Project Dissertation
 GroupAdd, remapGroup, ahk_exe Code.exe
 
