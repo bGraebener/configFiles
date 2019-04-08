@@ -42,6 +42,9 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z 
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
+" remap esc
+imap qq <Esc>
+
 " up and down arrows move line 
 "no <down> ddp
 "no <left> <Nop>
