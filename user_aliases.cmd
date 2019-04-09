@@ -24,6 +24,9 @@ vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
 conf=cd /d "c:\users\Basti\Coding\configFiles" >NUL 2>&1 || cd /d "g:\coding\configs\"
 home=cd %HOME%
+vimrc=vim "c:\users\basti\coding\configFiles\.vimrc"
+aliases=vim "c:\users\basti\coding\configFiles\.user_aliases.cmd"
+
 
 gl=git log --oneline --all --graph --decorate  $*
 g.=git add .
