@@ -9,7 +9,7 @@ e.=explorer .
 e =explorer $1
 
 ls=ls --show-control-chars -F --color $*
-ll=ls -al --color $*
+ll=ls -alh --color $*
 
 ss=scoop status
 su=scoop update $*

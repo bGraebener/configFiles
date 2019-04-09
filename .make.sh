@@ -1,9 +1,9 @@
 #!/bin/bash
 #.make.sh
 
-dir=~/configFiles
+dir=~/Coding/configFiles
 olddir=~/configFiles_old
-dotFiles=".bashrc .bash_aliases .vimrc .gitconfig .tmux.conf .zshrc"
+dotFiles=".bashrc .bash_aliases .vimrc .gitconfig .zshrc"
 
 echo "backing up old configfiles to $olddir"
 mkdir -p $olddir
