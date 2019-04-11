@@ -20,7 +20,11 @@ return
 
 ; open winamp
 Numpad0 & Numpad3::
-Run, winamp.exe
+if(WinExist("Winamp")){
+  WinActivate
+}else {
+  Run, winamp.exe
+}
 return
 
 
