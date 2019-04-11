@@ -1,13 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 #.make.sh
 
-dir=~/Coding/configFiles
+dir=~/configFiles
 olddir=~/configFiles_old
+dotFilesFolder=$dir/dotFiles
 dotFiles=".bashrc .bash_aliases .vimrc .gitconfig .zshrc"
 
-echo "backing up old configfiles to $olddir"
-mkdir -p $olddir
-echo "created $olddir ..."
+echo "backing up existing configfiles to $olddir"
+
+if [ ! -d $olddir ]; then 
+  mkdir -p $olddir
+  echo "created $olddir ..."
+fi
 
 for file in $dotFiles; do
   if [ -h ~/$file ]; then 
@@ -18,5 +22,5 @@ for file in $dotFiles; do
       mv ~/$file $olddir
   fi
       echo "Creating Symlink to $file in home directory..."
-      ln -s $dir/$file ~/$file
+      ln -s $dotFilesFolder/$file ~/$file
 done
