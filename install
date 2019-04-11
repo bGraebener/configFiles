@@ -17,7 +17,7 @@ for file in $dotFiles; do
   if [ -h ~/$file ]; then 
       echo "deleting existing symbolic link to $file..."
       rm ~/$file
-  elif [ -e ~/$file ]; then 
+  elif [ -f ~/$file ]; then 
       echo "Moving existing file to backup folder ..."
       mv ~/$file $olddir
   fi
