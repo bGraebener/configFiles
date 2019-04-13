@@ -16,7 +16,7 @@ alias gll='git pull'
 
 alias aliases='vim ~/configFiles/dotFiles/.bash_aliases'
 alias vimrc='vim ~/configFiles/dotFiles/.vimrc'
-alias zshrc='vim ~/configFiles/dotFiles.zshrc'
+alias zshrc='vim ~/configFiles/dotFiles/.zshrc'
 
 alias spm='sudo pacman $*'
 

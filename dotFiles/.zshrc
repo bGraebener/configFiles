@@ -97,6 +97,6 @@ export LANG=de_DE.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-  PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'$'\n'"$ "
+  PROMPT='${ret_status} %{$fg[green]%}%/%{$reset_color%} $(git_prompt_info)'$'\n'"$ "
   LS_COLORS=$LS_COLORS:'di=0;35:'
   source ~/.bash_aliases
