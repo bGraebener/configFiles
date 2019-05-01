@@ -539,6 +539,8 @@ awful.rules.rules = {
          properties = { screen = 1, tag = "Video" }} ,
        { rule = { class = "Thunar" },
          properties = { screen = 1, tag = "Files" }},
+       { rule = { class = "terminal" },
+         properties = { screen = 1, tag = "Terminal" }},
 }
 -- }}}
 
