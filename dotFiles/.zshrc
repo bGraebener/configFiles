@@ -63,7 +63,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions git globalias)
+plugins=(zsh-autosuggestions globalias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,4 +99,4 @@ export LANG=de_DE.UTF-8
 
   PROMPT='${ret_status} %{$fg[green]%}%/%{$reset_color%} $(git_prompt_info)'$'\n'"$ "
   LS_COLORS=$LS_COLORS:'di=0;35:'
-  source ~/.bash_aliases
+  source ~/configFiles/dotFiles/.bash_aliases

@@ -40,7 +40,8 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
+-- beautiful.init("/usr/share/awesome/themes/cesious/theme.lua")
+beautiful.init("~/.config/awesome/themes/cesious/theme.lua")
 beautiful.icon_theme        = "Papirus-Dark"
 beautiful.bg_normal         = "#141A1B"
 beautiful.bg_focus          = "#222B2E"
@@ -48,7 +49,7 @@ beautiful.font              = "Noto Sans Regular 10"
 beautiful.notification_font = "Noto Sans Bold 14"
 
 -- This is used later as the default terminal and editor to run.
-browser = "exo-open --launch WebBrowser" or "firefox"
+browser = "exo-open --launch WebBrowser" or "vivaldi"
 filemanager = "exo-open --launch FileManager" or "thunar"
 gui_editor = "mousepad"
 terminal = os.getenv("TERMINAL") or "lxterminal"
@@ -132,7 +133,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock("%H:%M ")
+mytextclock = wibox.widget.textclock("%d/%m | %H:%M ")
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
@@ -224,10 +225,11 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "bottom", screen = s })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
+	spacing = 15,
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
@@ -343,6 +345,8 @@ globalkeys = gears.table.join(
 
     awful.key({modkey            }, "c", function () awful.spawn("/usr/bin/clementine")   end,
               {description = "open clementine audio player", group = "launcher"}),
+    awful.key({modkey            }, "i", function () awful.spawn("/usr/local/bin/idea")   end,
+              {description = "open Intellij IDEA", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -539,6 +543,8 @@ awful.rules.rules = {
          properties = { screen = 1, tag = "Video" }} ,
        { rule = { class = "Thunar" },
          properties = { screen = 1, tag = "Files" }},
+       { rule = { class = "IDEA" },
+         properties = { screen = 1, tag = "IDE" }},
        { rule = { class = "terminal" },
          properties = { screen = 1, tag = "Terminal" }},
 }
