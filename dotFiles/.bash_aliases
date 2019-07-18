@@ -28,11 +28,14 @@ function gcm(){
 
 # ===== pacman ====
 alias spm='sudo pacman $*'
-alias pc.list='pacman -Qqe | less'
-alias pc.search='pacman -Si $*'
+alias pc.llist='pacman -Qqe | less'   # list all local packages
+alias pc.info='pacman -Si $*'
+alias pc.search='pacman -Ss $*'       # search packages in repos
 alias pc.install='sudo pacman -S $*'
-alias pc.uninstall='sudo pacman -Rncs $*'
-alias pc.orphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias pc.uninstall='sudo pacman -Rnssu $*'
+alias pc.orphans='sudo pacman -Rns $(pacman -Qtdq)'  # remove orphan packages
 alias pc.update='sudo pacman -Syu $*'
 alias pc.clean='sudo pacman -Sc'
 alias pc.cleanfull='sudo pacman -Scc'
+
+alias y.music='youtube-dl -x --audio-format mp3 --audio-quality 1 $*'

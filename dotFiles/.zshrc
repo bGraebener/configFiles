@@ -99,4 +99,4 @@ export LANG=de_DE.UTF-8
 
   PROMPT='${ret_status} %{$fg[green]%}%/%{$reset_color%} $(git_prompt_info)'$'\n'"$ "
   LS_COLORS=$LS_COLORS:'di=0;35:'
-  source ~/configFiles/dotFiles/.bash_aliases
+  source ~/.bash_aliases
