@@ -9,7 +9,7 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="pmcgee"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -66,6 +66,7 @@ ZSH_THEME="robbyrussell"
 plugins=(zsh-autosuggestions globalias)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -97,6 +98,7 @@ export LANG=de_DE.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-  PROMPT='${ret_status} %{$fg[green]%}%/%{$reset_color%} $(git_prompt_info)'$'\n'"$ "
+  #PROMPT='${ret_status} %{$fg[green]%}%/%{$reset_color%} $(git_prompt_info)'$'\n'"$ "
   LS_COLORS=$LS_COLORS:'di=0;35:'
   source ~/.bash_aliases
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

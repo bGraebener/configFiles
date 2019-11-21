@@ -347,6 +347,8 @@ globalkeys = gears.table.join(
               {description = "open clementine audio player", group = "launcher"}),
     awful.key({modkey            }, "i", function () awful.spawn("/usr/local/bin/idea")   end,
               {description = "open Intellij IDEA", group = "launcher"}),
+    awful.key({modkey            }, "v", function () awful.spawn("/usr/bin/code")   end,
+              {description = "open VS Code", group = "launcher"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -547,6 +549,8 @@ awful.rules.rules = {
          properties = { screen = 1, tag = "IDE" }},
        { rule = { class = "terminal" },
          properties = { screen = 1, tag = "Terminal" }},
+       { rule = { class = "code-oss" },
+         properties = { screen = 1, tag = "IDE" }},
 }
 -- }}}
 
