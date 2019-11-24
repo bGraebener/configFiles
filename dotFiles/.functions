@@ -1,0 +1,30 @@
+
+# Copies a single file to one or more folders
+function mcopy() {
+
+    if [[ ! $# -ge 2 ]]; then
+        echo "Wrong number of arguments."
+        echo "Usage mcopy FILE FOLDER [Folders...]"
+        return 66
+    fi
+
+    file=$1
+    # check that argument 1 is an existing file
+    if [ ! -f "$file" ]; then
+        echo "$file does not exist. Exiting ..."
+        return 67
+    fi
+
+    # the other arguments should at least be one existing folder
+    shift # move past file argument
+    for dir in ${@}; do
+       if [ -d "$dir" ]; then
+           echo "copying $file to $dir"
+           cp $file $dir
+        else
+            echo "Can not copy $file to $dir. $dir does not exist."
+       fi
+    done
+
+    return 0
+}

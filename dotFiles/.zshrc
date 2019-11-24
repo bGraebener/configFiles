@@ -102,3 +102,4 @@ export LANG=de_DE.UTF-8
   LS_COLORS=$LS_COLORS:'di=0;35:'
   source ~/.bash_aliases
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  source ~/.functions
