@@ -1,24 +1,43 @@
+#!/usr/bin/env bash
 
+# Title:         .functions
+# Description:   contains functions to be sourced at startup
+# Author:        bastiangraebener@gmail.com
+# Date:          2019-11-27
+# Version:       1.0.0
+
+
+#####################################################
 # Copies a single file to one or more folders
+#
+# Arguments:
+# 	$1 the file to copy
+#   $2, $3, ... the destination folders
+# Returns:
+# 	None
+#####################################################
 function mcopy() {
 
-    if [[ ! $# -ge 2 ]]; then
+    readonly WRONG_ARGS_NUM=66
+    readonly FILE_NOT_EXISTS=66
+
+    if (( $# <= 2 )); then
         echo "Wrong number of arguments."
-        echo "Usage mcopy FILE FOLDER [Folders...]"
-        return 66
+        echo "Usage: mcopy FILE FOLDER [Folders...]"
+        return $WRONG_ARGS_NUM
     fi
 
     file=$1
     # check that argument 1 is an existing file
-    if [ ! -f "$file" ]; then
+    if [[ ! -f "$file" ]]; then
         echo "$file does not exist. Exiting ..."
-        return 67
+        return $FILE_NOT_EXISTS
     fi
 
-    # the other arguments should at least be one existing folder
+    # the other arguments should at least be two existing folders
     shift # move past file argument
     for dir in ${@}; do
-       if [ -d "$dir" ]; then
+       if [[ -d "$dir" ]]; then
            echo "copying $file to $dir"
            cp $file $dir
         else
